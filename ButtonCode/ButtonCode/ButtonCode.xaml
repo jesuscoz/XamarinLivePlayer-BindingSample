@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:view="clr-namespace:ButtonCode.Android;assembly=ButtonCode.Android"
+             x:Class="ButtonCode.ButtonCode">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <ContentView Grid.Row="0">
+            <Button Command="{Binding NotificableViewModel.ClickCommand}" Text="{Binding NotificableViewModel.Text}" />
+        </ContentView>
+
+        <Frame  
+            Grid.Row="1"
+            OutlineColor="#9E9E9E"
+            BackgroundColor="Gray" 
+            HasShadow="False"
+            Padding="0"
+            Margin="0, 12, 0, 0">
+            <Grid>
+                <Label Text="{Binding NotificableViewModel.Text}"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+            </Grid>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding NotificableViewModel.ClickCommand}" />
+            </Frame.GestureRecognizers>
+        </Frame>
+
+        <ContentView Grid.Row="2">
+            <Button Command="{Binding BindableViewModel.ClickCommand}" Text="{Binding BindableViewModel.Text}" />
+        </ContentView>
+    </Grid>
+
+</ContentPage>

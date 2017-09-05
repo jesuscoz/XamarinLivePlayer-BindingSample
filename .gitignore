@@ -1,0 +1,8 @@
+.vs/*
+ButtonCode/ButtonCode.Android/bin/*
+ButtonCode/ButtonCode.Android/obj/*
+packages/*
+ButtonCode/ButtonCode/obj/*
+ButtonCode/ButtonCode/bin/*
+ButtonCode/ButtonCode.iOS/obj/iPhone/Debug/ButtonCode.iOS.csproj.CoreCompileInputs.cache
+ButtonCode/ButtonCode.iOS/obj/*
